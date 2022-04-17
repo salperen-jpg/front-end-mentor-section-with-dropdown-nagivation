@@ -1,0 +1,62 @@
+@use './variables.scss' as v;
+
+nav {
+  width: 90vw;
+  margin: 0 auto;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  .nav-center {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-links {
+      display: none;
+    }
+    .nav-right-buttons {
+      display: none;
+    }
+    @media screen and (min-width: 992px) {
+      .nav-links {
+        margin-left: 3rem;
+        display: flex;
+        gap: 2rem;
+        flex: 1;
+        .nav-link {
+          text-transform: capitalize;
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: v.$medium-gray;
+          letter-spacing: 0.1rem;
+          transition: v.$transition;
+        }
+        .nav-link:hover {
+          color: v.$almost-black;
+        }
+      }
+      .nav-right-buttons {
+        display: block;
+        font-size: 0.9rem;
+        .register-btn {
+          border: 1px solid v.$medium-gray;
+          border-radius: 10px;
+          margin-left: 2rem;
+          padding: 0.375rem 1rem;
+          color: v.$medium-gray;
+        }
+        .register-btn:hover {
+          border-color: v.$almost-black;
+        }
+        .right-btn {
+          font-size: 0.8rem;
+          font-weight: bolder;
+        }
+      }
+      .hamburger-btn {
+        display: none;
+      }
+    }
+  }
+}
