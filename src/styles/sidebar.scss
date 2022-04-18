@@ -1,0 +1,48 @@
+@use './variables.scss' as v;
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 0.3s linear;
+}
+
+.open {
+  visibility: visible;
+  z-index: 1;
+  transform: translateX(0);
+}
+
+.sidebar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15rem;
+  height: 100vh;
+  background: #fff;
+  padding: 1rem;
+}
+.sidebar .btn-container {
+  text-align: right;
+  .close-btn {
+    font-size: 3rem;
+  }
+}
+.sidebar-links {
+  margin-top: 2rem;
+  li {
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 1.5rem;
+    color: v.$medium-gray;
+    transition: all 0.3s linear;
+  }
+  li:hover {
+    color: v.$almost-black;
+  }
+}
