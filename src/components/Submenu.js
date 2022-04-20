@@ -25,7 +25,7 @@ const Submenu = () => {
       {links?.map((link, index) => {
         return (
           <p key={index} className='submenu-link'>
-            <span>{link.icon}</span>
+            <span style={{ color: `${link.color}` }}>{link.icon}</span>
             <span>{link.label}</span>
           </p>
         );

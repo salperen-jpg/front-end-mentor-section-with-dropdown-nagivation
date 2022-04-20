@@ -1,22 +1,34 @@
-import { FaCreditCard, FaBook, FaBriefcase } from 'react-icons/fa';
+import {
+  FaCreditCard,
+  FaCalendarDay,
+  FaAcquisitionsIncorporated,
+  FaMoneyBillWaveAlt,
+  FaPlug,
+} from 'react-icons/fa';
+import { FcTodoList, FcPlanner, FcLibrary } from 'react-icons/fc';
+import { MdOutlineHelp } from 'react-icons/md';
 import React from 'react';
 const sublinks = [
   {
     page: 'features',
     links: [
-      { label: 'todo list', icon: <FaCreditCard />, url: '/products' },
-      { label: 'calendar', icon: <FaCreditCard />, url: '/products' },
-      { label: 'reminders', icon: <FaCreditCard />, url: '/products' },
-      { label: 'planning', icon: <FaCreditCard />, url: '/products' },
+      { label: 'todo list', icon: <FcTodoList /> },
+      { label: 'calendar', icon: <FaCalendarDay />, color: 'red' },
+      {
+        label: 'reminders',
+        icon: <FaAcquisitionsIncorporated />,
+        color: 'blue',
+      },
+      { label: 'planning', icon: <FcPlanner />, color: 'purple' },
     ],
   },
   {
     page: 'company',
     links: [
-      { label: 'plugins', icon: <FaBook />, url: '/products' },
-      { label: 'libraries', icon: <FaBook />, url: '/products' },
-      { label: 'help', icon: <FaBook />, url: '/products' },
-      { label: 'billing', icon: <FaBook />, url: '/products' },
+      { label: 'plugins', icon: <FaPlug />, color: 'yellow' },
+      { label: 'libraries', icon: <FcLibrary />, color: 'grey' },
+      { label: 'help', icon: <MdOutlineHelp />, color: 'orange' },
+      { label: 'billing', icon: <FaMoneyBillWaveAlt />, color: 'lightblue' },
     ],
   },
   {
